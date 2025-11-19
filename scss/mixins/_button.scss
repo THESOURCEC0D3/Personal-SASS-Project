@@ -1,0 +1,10 @@
+@mixin button-style{
+     width: 30%;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 999;
+            border-radius: 50px;
+            border: 1px solid transparent;
+            padding: 1em;
+            color: white;
+}

@@ -1,0 +1,144 @@
+@use "../mixins/breakpoint" as v;
+@use "../mixins/button" as b;
+
+#about-section{
+    min-height: 100vh;
+    background-image: url('../assets/images/kitchen.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-block: 70px;
+
+     #overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.637);
+        z-index: 1;
+    }
+
+    #main{
+        
+        // border: 2px solid black;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        // padding-block: ;
+        margin: auto;
+
+        .main__left{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+         h2{
+         z-index: 999;
+        position: relative;
+        font-size: 36px;
+         font-family: 'Stack Sans Notch', sans-serif;
+
+        span{
+            color:rgba(144, 41, 255, 1) ;
+        }
+    }
+
+    p{
+         z-index: 999;
+        position: relative;
+    }
+
+    #stats{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .stat{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+             .numbers{
+            display: flex;
+            align-items: center;
+
+            span{
+                font-size: 40px;
+                font-weight: 600;
+                 font-family: 'Stack Sans Notch', sans-serif;
+                 position: relative;
+                 z-index: 999;
+            }
+        }
+
+        #donate{
+           @include b.button-style;
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        #info{
+            @include b.button-style;
+            background-color: rgba(144, 41, 255, 1);
+        }
+        }
+
+        #separator{
+            height: 2px;
+            background-color: rgb(0, 0, 0);
+            margin: 20px 0;
+            width: 80%;
+            position: relative;
+            z-index: 999;}
+
+    }
+}
+
+    img{
+                    max-width: 100%;
+                    position: relative;
+                    z-index: 999;
+                    border-radius: 20px;
+                    object-fit: contain;
+                }
+    }
+
+   @include v.breakpoint(small){
+        #main{
+            width: 70%;
+
+            .main__child{
+                width: 100%;
+            }
+        }
+   }
+
+    @include v.breakpoint(medium){
+        #main{
+            width: 80%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            overflow: hidden;
+
+            .main__child{
+                // flex: 1;
+                width: 100%;
+                position: relative;
+                z-index: 999;
+
+                img{
+                    max-width: 100%;
+                    position: relative;
+                    z-index: 999;
+                }
+            }
+        }
+    }
+}
+
+
+
+    

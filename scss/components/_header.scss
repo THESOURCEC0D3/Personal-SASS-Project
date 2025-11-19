@@ -1,0 +1,75 @@
+@use "../mixins/breakpoint" as v;
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  padding-block: 1em;
+  z-index: 1000;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+//   border: 2px solid black;
+
+  h1 {
+    color: white;
+    z-index: 999;
+     position: relative;
+  }
+
+  nav ul {
+    display: none;  // Hidden by default for mobile
+    gap: 10px;  // Gap will apply when visible
+  }
+
+  nav li {
+    text-decoration: none;
+    list-style: none;
+  }
+
+  nav li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  #access {
+    display: none;  // Hidden by default for mobile
+    gap: 10px;
+  }
+
+  #access a {
+    text-decoration: none;
+  }
+
+  #access button {
+    padding: 0.5em 2em;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+   #openmenu{
+        display: block;
+        z-index: 999;
+         position: relative;
+    }
+
+  @include v.breakpoint(medium) {
+    nav ul {
+      display: flex;
+      z-index: 999; 
+       position: relative; // Show and flex on small+ screens
+    }
+    
+    #access {
+        display: flex;
+        z-index: 999;
+        position: relative;  // Show on small+ screens
+    }
+    
+    #openmenu{
+        display: none;
+    }
+}
+}

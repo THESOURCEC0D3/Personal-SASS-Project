@@ -1,0 +1,105 @@
+@use '../mixins/breakpoint' as v;
+
+#hero-section{
+    background-image: url('../assets/images/darkheropicture.jpg');
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 1em 3em;
+    position: relative;
+
+    #overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.438);
+        z-index: 1;
+    }
+
+    h3{
+        color: white;
+        font-size: 28px;
+        font-family: 'Stack Sans Notch', sans-serif;
+        font-weight: bolder;
+        z-index: 999;
+        position: relative;
+
+    }
+
+    h2{
+        color: rgba(223, 255, 41, 1);
+        font-size: 46px;
+        font-family: 'Stack Sans Notch', sans-serif;
+        font-weight: bolder;
+        z-index: 999;
+         position: relative;
+    }
+
+    span{
+        color: white;
+    }
+
+    p{
+        color: white;
+        z-index: 999;
+         position: relative;
+    }
+
+    button{
+        background-color: rgba(144, 41, 255, 1);
+        padding: 0.8em 1em;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        z-index: 999;
+         position: relative;
+    }
+
+    img{
+        min-width: 350px;
+        max-width: 60%;
+        z-index: 999;
+         position: relative;
+    }
+
+    @include v.breakpoint(small){
+        padding: 2em;
+
+        h3{
+            font-size: 34px;
+        }
+
+        h2{
+            font-size:  56px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+    }
+
+    @include v.breakpoint(medium){
+        padding: 5em;
+
+        h3{
+            font-size: 38px;
+        }
+
+        h2{
+            font-size:  62px;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    }
+}
