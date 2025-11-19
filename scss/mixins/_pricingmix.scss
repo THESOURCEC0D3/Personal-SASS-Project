@@ -1,0 +1,49 @@
+@mixin pricing{
+        border: 1px solid black;
+        border: none;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.486);
+        text-align: left;
+        padding: 2em 3em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
+        p{
+            span{
+                font-size: 28px;
+            }
+        }
+
+        h3{
+            font-size: 36px;
+
+            span{
+                color: rgba(255, 255, 255, 0.788);
+            }
+        }
+
+        .features{
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+
+            .list{
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    li{
+                        list-style: none;
+
+                        &::before{
+                            content: '✔';
+                            color:rgba(255, 255, 255, 0.486) ;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+}
